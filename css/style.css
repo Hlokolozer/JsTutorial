@@ -1,4 +1,26 @@
+img {
+    width:270px;
+    height: 250px;
+    padding: 10px;
+}
 .btn{
     /* background:#333; */
     color: #fff;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+   
+    list-style: none;
+}
+li a{
+    /* display: block; */
+    width: 75px;
+}
+.well-sm{
+    width: 250px;
+    text-align: center;
 }
