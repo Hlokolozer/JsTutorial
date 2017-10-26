@@ -22,6 +22,7 @@
 
 .container{
     padding-top:100px;
+    position: relative;
 }
 img {
     width:270px;
@@ -60,7 +61,10 @@ li a{
 }
 .footer{
     background: #eeeeee;
-    position: fixed;
+    position: fixed absolute;
     bottom: 0;
     width: 100%;
+    height: auto;
+    padding-top: 10px;
+    text-align: center
 }
