@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Tutorial</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.css"></link>
+	<link rel="stylesheet" href="css/bootstrap-select.min.css"></link>
+</head>
+<body>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<div class="container">
+			<h1> Javascript Tutorial</h1>
+
+			<p>
+				Javascript is a strong tool to know, many years I ran away from it, but now am facing my demons.
+			</p>
+
+			<a class="btn btn-primary" href="javascript:void(0)">Submit</a>
+		</div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+		
+		<script type="text/javascript">
+		(function($)
+		{
+			$('.btn').on('click',function(e){
+				//alert('Button Clicked');
+				//window.location.href('htttp://www.google.com');
+				$(location).attr('href', 'http://stackoverflow.com');
+			});
+		})(jQuery);
+		</script>
+</body>
+</html>
