@@ -21,7 +21,7 @@
 }
 
 .container{
-    padding-top:100px;
+    padding-top:50px;
     position: relative;
 }
 img {
@@ -46,6 +46,10 @@ li a{
     /* display: block; */
     width: 75px;
 }
+
+li ul{
+    padding-left: 20px;
+}
 .well-sm{
     width: 250px;
     text-align: center;
@@ -64,7 +68,7 @@ li a{
     position: fixed absolute;
     bottom: 0;
     width: 100%;
-    height: auto;
+    height: 50px;
     padding-top: 10px;
     text-align: center
 }
