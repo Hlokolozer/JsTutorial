@@ -38,11 +38,10 @@
 						<li ><a href="#">React JS </a></li>
 						</ul>
 				</nav>
-				</div>
-			</header>	
+			</div>
+		</header>	
 	
 		<div class="container">
-			
 				
 			<div class="row">
 					<div col-md-12>
@@ -61,7 +60,6 @@
 					
 							To list Bootstrap's benefits click below.
 					</p>
-				
 				
 					<a class="btn btn-primary" href="javascript:void(0)">Click</a>
 				</div> 
@@ -98,7 +96,9 @@
 					</ul>
 					</p>
 				</div>
-				<div class="col-md-6 pull-left">
+				
+				<div id="readmore" class="col-md-6 pull-left">
+					
 					<p>
 						This tutorial consist of Javascript and it's Libraries and Frameworks. It also uses components of Bootstrap purely. 
 						</p>
@@ -130,14 +130,111 @@
 					</ul>
 					</p>
 				</div>
-			
+				<div id="react-container">
+						
+				</div>
+				<div>
+				<?php
+							$names =array('Hloni', 'Thembi');
+							$lastnames = array('Shabalala','Motsoeneng');
+						?>
+
+						<table style=" width:300px">
+							<thead>
+								<tr>
+									<th>
+										Name
+									</th>
+									<th>
+										Surname
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+							<?php //foreach($names as $name): ?>
+								<tr>
+									<?php 
+									// echo '<pre>';
+									// print_r($names);
+									// echo '</pre>';
+											//foreach($names as $name): ?>
+									<td>
+										Loo
+										<?php //$name?>
+									
+									</td>
+									<td>
+										Loop
+										<?php //$name?>
+									
+									</td>
+									
+									<?php //endforeach?>
+								</tr>
+							</tbody>
+						</table>
+						<hr>
+						<?php
+							
+
+
+								$names = array("1A","1B","1C","2A","2B","2C","3A","3B","3C");
+									$user_names = array("Jen", "Smith", "Nick", "Rose", "Jason", "Ralph", "Bruce","Linda", "Kate");
+
+									$combine = array_combine($names, $user_names);
+
+
+
+									$html = "<table>";
+									$html .= "<tr><td>Sl.No</td><td>Name</td><td>Username</td></tr>";
+									$i = 1;
+									foreach ($combine as $names =>  $user_names):
+
+										$html .= "<tr>";
+										$html .= "<td>".$i."</td>";
+										$html .= "<td>".$names."</td>";
+										$html .= "<td>".$user_names."</td>";
+										$html .= "</tr>";
+
+										$i++;
+									endforeach;
+									$html .= "</table>";
+
+									echo $html;
+
+
+								$names = array("1A","1B","1C","2A","2B","2C","3A","3B","3C");
+								$user_names = array("Jen", "Smith", "Nick", "Rose", "Jason", "Ralph", "Bruce","Linda", "Kate");
+								$dob = array("12","13","14","15","16","17","18","19","20");
+								$height = array("6","7","8","5","4","7","5","9","5");
+
+
+								$html = "<table>";
+								$html .= "<tr><th>Sl.No</th><th>Name</th><th>Username</th><th>dob</th><th>height</th></tr>";
+
+								foreach ($names as $id => $key):
+
+										$html .= "<tr>";
+										$html .= "<td>".($id+1)."</td>";
+										$html .= "<td>".$key."</td>";
+										$html .= "<td>".$user_names[$id]."</td>";
+										$html .= "<td>".$dob[$id]."</td>";
+										$html .= "<td>".$height[$id]."</td>";
+										$html .= "</tr>";
+
+								endforeach;
+
+								$html .= "</table>";
+								echo $html;
+						?>
+				</div>
 			</div>
 			<!-- row -->
 		</div>
 		<!-- container -->
 		<footer class=footer>
 			
-				<p>Copyright &copy; 2017 | Lehlohonolo Motsoeneng</p>
+				<p>Copyright &copy; <?= date('Y')?> |<a href="https://github.com/Hlokolozer"> Lehlohonolo Motsoeneng</a> </p>
 			
 		</footer>
 		<script type="text/javascript" src="js/jquery.js"></script>
@@ -146,16 +243,40 @@
 		<script type="text/javascript" src="js/angular.js"></script>
 		<script type="text/javascript" src="js/react.js"></script>
 		<script type="text/javascript" src="js/react-dom.js"></script>
+		<script src="index.js"></script>
 		
 		<script type="text/javascript">
+		
 		(function($)
 		{
+			
 			$('.btn').on('click',function(e){
 				//alert('Button Clicked');
 				//window.location.href('htttp://www.google.com');
-				$(location).attr('href', 'http://stackoverflow.com');
+				// $(location).attr('href', 'http://stackoverflow.com');
+				$('#readmore').animate({left:'50px'},'slow');
 			});
 		})(jQuery);
+
 		</script>
+		<script type="text/javascript">
+			(function($){
+				$('#readmore').addClass('well');
+				// $('ul li:last-child').append('4. Appending');	
+				
+				//$('#readmore').css('background-color','grey');
+				
+			})
+			(jQuery);
+		</script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				(function($){
+					$('#readmore').animate({left:'400px'},'slow');
+				})(jQuery);
+			});
+		</script>
+		
 </body>
 </html>
